@@ -1,29 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+
 import Description from './components/Description'
 import Image from './components/Image'
+import BtnL from './components/BtnL'
+import BtnR from './components/BtnR'
 
-const BtnL = ({ index, setIndex }) => {
-  return (
-    <aside onClick={() => setIndex((current) => current - 1)} className='btnLeft'>
-      <img src='../assets/arrowL.png' alt='arrow left' />
-    </aside>
-  )
-}
-
-const BtnR = ({ index, setIndex }) => {
-  return (
-    <aside onClick={() => setIndex((current) => current + 1)} className='btnRight'>
-      <img src='../assets/arrowL.png' alt='arrow left' />
-    </aside>
-  )
-}
 
 function App() {
   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-
-  })
 
   return (
     <main>
