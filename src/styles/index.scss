@@ -33,7 +33,6 @@ section {
     align-items: flex-start;
     gap: 2rem;
     padding-left: 6.5rem;
-    ;
 
     h1 {
       font: $title;
@@ -92,33 +91,34 @@ section {
       object-fit: fit;
     }
   }
-}
 
-.btnLeft {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  margin: 0 1.25rem;
+  .btnLeft {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0 1.25rem;
 
-  img {
-    width: 44px;
-    cursor: pointer;
+    img {
+      width: 44px;
+      cursor: pointer;
+    }
+  }
+
+  .btnRight {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+    margin: 0 1.25rem;
+
+    img {
+      width: 44px;
+      cursor: pointer;
+    }
   }
 }
 
-.btnRight {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%) rotate(180deg);
-  margin: 0 1.25rem;
-
-  img {
-    width: 44px;
-    cursor: pointer;
-  }
-}
 
 @media (max-width: 1200px) {
   main {

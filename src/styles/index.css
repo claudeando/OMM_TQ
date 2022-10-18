@@ -77,27 +77,25 @@ section figure img {
   -o-object-fit: fit;
      object-fit: fit;
 }
-
-.btnLeft {
+section .btnLeft {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
   margin: 0 1.25rem;
 }
-.btnLeft img {
+section .btnLeft img {
   width: 44px;
   cursor: pointer;
 }
-
-.btnRight {
+section .btnRight {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%) rotate(180deg);
   margin: 0 1.25rem;
 }
-.btnRight img {
+section .btnRight img {
   width: 44px;
   cursor: pointer;
 }

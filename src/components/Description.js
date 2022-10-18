@@ -3,7 +3,11 @@ const Article = ({ index, setIndex }) => {
     return (
         <article>
             <h1>TITLE TEXT</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut et dolore…</p>
+            {index === 0 &&
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut et dolore…</p>
+            }
+            {index === 1 &&
+                <p>Hi OMM, I know this is not required, but this is the second UI for demo purpose.</p>}
             <button type='button'>More</button>
             <ul>
                 <li><div onClick={() => setIndex(0)} className={index === 0 ? 'active' : 'box'} ></div></li>
