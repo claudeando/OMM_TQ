@@ -1,0 +1,132 @@
+@import url("https://use.typekit.net/oku3pra.css");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: futura-pt, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  position: relative;
+}
+
+section {
+  display: flex;
+  background: black;
+}
+section article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding-left: 6.5rem;
+}
+section article h1 {
+  font: normal normal bold 22px/32px Futura;
+  color: #fff;
+  position: relative;
+}
+section article h1::before {
+  content: "CATEGORY";
+  font-size: 10px;
+  position: absolute;
+  top: -1.5rem;
+}
+section article p {
+  width: 20rem;
+  font: 13px;
+  color: #fff;
+}
+section article button {
+  font: normal normal bold 14px/18px Futura;
+  letter-spacing: 1.4px;
+  padding: 1rem 1.75rem;
+  cursor: pointer;
+}
+section article ul {
+  display: flex;
+  gap: 0.4rem;
+}
+section article ul li {
+  list-style: none;
+}
+section article ul li .active {
+  width: 9px;
+  height: 9px;
+  background: #380CCC;
+}
+section article ul li .box {
+  width: 9px;
+  height: 9px;
+  background: white;
+}
+section figure {
+  flex: 1;
+}
+section figure img {
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: fit;
+     object-fit: fit;
+}
+
+.btnLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin: 0 1.25rem;
+}
+.btnLeft img {
+  width: 44px;
+  cursor: pointer;
+}
+
+.btnRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
+  margin: 0 1.25rem;
+}
+.btnRight img {
+  width: 44px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  main {
+    width: 100%;
+  }
+}
+@media (max-width: 950px) {
+  section {
+    min-height: 65vh;
+    padding: 2rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  section article {
+    padding-left: 0;
+    justify-content: space-evenly;
+    margin: 0 3rem;
+  }
+  section article h1 {
+    font-size: 14px;
+  }
+  section article p {
+    width: 100%;
+  }
+  section article button {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=index.css.map */

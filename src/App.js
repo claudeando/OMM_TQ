@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import Description from './components/Description'
+import Image from './components/Image'
+
+const BtnL = ({ index, setIndex }) => {
+  return (
+    <aside onClick={() => setIndex((current) => current - 1)} className='btnLeft'>
+      <img src='../assets/arrowL.png' alt='arrow left' />
+    </aside>
+  )
+}
+
+const BtnR = ({ index, setIndex }) => {
+  return (
+    <aside onClick={() => setIndex((current) => current + 1)} className='btnRight'>
+      <img src='../assets/arrowL.png' alt='arrow left' />
+    </aside>
+  )
+}
 
 function App() {
+  const [index, setIndex] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      {index === 0 &&
+        <section id='carousel1'>
+          <Description index={index} setIndex={setIndex} />
+          <Image />
+          <BtnL setIndex={setIndex} />
+          <BtnR setIndex={setIndex} />
+        </section>
+      }
+    </main>
   );
 }
 
